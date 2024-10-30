@@ -39,17 +39,11 @@ export const metadata: Metadata = {
   formatDetection: {
     telephone: false,
   },
-  openGraph: {
+  openGraph: {  
     title: "AI Question - Free Exam Generator with AI",
     description:
       "Create personalized exams on any subject with the power of AI. AI Question offers a free and easy way to test your knowledge.",
     siteName: "AI Question",
-    images: {
-      url: "/logo.png",
-      width: 1200,
-      height: 800,
-      alt: "AI Question - Free Exam Generator",
-    },
     locale: "en_US",
     type: "website",
   },
@@ -59,10 +53,6 @@ export const metadata: Metadata = {
     description:
       "AI Question allows you to create and take exams on any topic. Test your knowledge and learn with AI-powered questions for free.",
     creator: "@felipebelotto",
-    images: {
-      url: "/logo.png",
-      alt: "AI Question - Free Exam Generator",
-    },
   },
   robots: {
     index: true,

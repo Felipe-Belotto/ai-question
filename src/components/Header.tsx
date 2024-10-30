@@ -1,6 +1,5 @@
 import Image from "next/image";
 import { LanguageSelector } from "./ui/LanguageSelector";
-import { ThemeToggleWrapper } from "./ui/theme-toggle";
 
 export function Header() {
   return (
@@ -18,7 +17,6 @@ export function Header() {
         </div>
         <div className="flex items-center gap-4">
           <LanguageSelector />
-          {/* 		<ThemeToggleWrapper /> */}
         </div>
       </div>
     </header>

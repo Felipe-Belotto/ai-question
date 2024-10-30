@@ -9,7 +9,6 @@ import {
 } from "@/components/ui/select";
 import { useLanguage } from "@/context/LanguageContext";
 import { languageTag } from "@/paraglide/runtime";
-import { Globe } from "lucide-react";
 import Image from "next/image";
 
 const LANGUAGE_OPTIONS = [

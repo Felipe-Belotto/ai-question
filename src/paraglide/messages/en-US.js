@@ -10,62 +10,235 @@
  */
 
 
-export { howItWorks } from "./pt-BR.js"
+/**
+ * 
+ * @returns {string}
+ */
+/* @__NO_SIDE_EFFECTS__ */
+export const howItWorks = () => `How it works`
 
-export { creatorInfo } from "./pt-BR.js"
 
-export { welcome } from "./pt-BR.js"
+/**
+ * 
+ * @returns {string}
+ */
+/* @__NO_SIDE_EFFECTS__ */
+export const creatorInfo = () => `Developer Information`
 
-export { welcomeMessage } from "./pt-BR.js"
 
-export { inputPromptMessage } from "./pt-BR.js"
+/**
+ * 
+ * @returns {string}
+ */
+/* @__NO_SIDE_EFFECTS__ */
+export const welcome = () => `Welcome to`
 
-export { inputPromptPlaceholder } from "./pt-BR.js"
 
-export { submitWaitingMessage } from "./pt-BR.js"
+/**
+ * 
+ * @returns {string}
+ */
+/* @__NO_SIDE_EFFECTS__ */
+export const welcomeMessage = () => `Generate personalized exams with artificial intelligence to enhance learning.`
 
-export { somethingWrong } from "./pt-BR.js"
 
-export { startQuiz } from "./pt-BR.js"
+/**
+ * 
+ * @returns {string}
+ */
+/* @__NO_SIDE_EFFECTS__ */
+export const inputPromptMessage = () => `What topic would you like to improve your skills on?`
 
-export { step1Title } from "./pt-BR.js"
 
-export { step1Description } from "./pt-BR.js"
+/**
+ * 
+ * @returns {string}
+ */
+/* @__NO_SIDE_EFFECTS__ */
+export const inputPromptPlaceholder = () => `Enter the topic to generate your exam`
 
-export { step2Title } from "./pt-BR.js"
 
-export { step2Description } from "./pt-BR.js"
+/**
+ * 
+ * @returns {string}
+ */
+/* @__NO_SIDE_EFFECTS__ */
+export const submitWaitingMessage = () => `Creating your journey`
 
-export { step3Title } from "./pt-BR.js"
 
-export { step3Description } from "./pt-BR.js"
+/**
+ * 
+ * @returns {string}
+ */
+/* @__NO_SIDE_EFFECTS__ */
+export const somethingWrong = () => `Something went wrong - Try again`
 
-export { creatorImageAlt } from "./pt-BR.js"
 
-export { creatorDescription } from "./pt-BR.js"
+/**
+ * 
+ * @returns {string}
+ */
+/* @__NO_SIDE_EFFECTS__ */
+export const startQuiz = () => `Start test`
 
-export { quizTitle } from "./pt-BR.js"
+
+/**
+ * 
+ * @returns {string}
+ */
+/* @__NO_SIDE_EFFECTS__ */
+export const step1Title = () => `Choose Your Topic`
+
+
+/**
+ * 
+ * @returns {string}
+ */
+/* @__NO_SIDE_EFFECTS__ */
+export const step1Description = () => `Start by selecting the topic you are interested in exploring.`
+
+
+/**
+ * 
+ * @returns {string}
+ */
+/* @__NO_SIDE_EFFECTS__ */
+export const step2Title = () => `Enter your Prompt`
+
+
+/**
+ * 
+ * @returns {string}
+ */
+/* @__NO_SIDE_EFFECTS__ */
+export const step2Description = () => `Enter a specific prompt or question about your chosen topic.`
+
+
+/**
+ * 
+ * @returns {string}
+ */
+/* @__NO_SIDE_EFFECTS__ */
+export const step3Title = () => `Receive your Exam`
+
+
+/**
+ * 
+ * @returns {string}
+ */
+/* @__NO_SIDE_EFFECTS__ */
+export const step3Description = () => `The platform generates a 10-question exam customized to your topic.`
+
+
+/**
+ * 
+ * @returns {string}
+ */
+/* @__NO_SIDE_EFFECTS__ */
+export const creatorImageAlt = () => `Creator's photo`
+
+
+/**
+ * 
+ * @returns {string}
+ */
+/* @__NO_SIDE_EFFECTS__ */
+export const creatorDescription = () => `Front-end developer from Campinas, Brazil, with a passion for interface design and building interactive websites. This project aims to demonstrate how AI tools can enhance education, expanding access to knowledge and promoting lifelong learning.`
+
+
+/**
+ * @param {{ topic: NonNullable<unknown> }} params
+ * @returns {string}
+ */
+/* @__NO_SIDE_EFFECTS__ */
+export const quizTitle = (params) => `Quiz: ${params.topic}`
+
 
 export { defaultTopic } from "./pt-BR.js"
 
-export { result } from "./pt-BR.js"
+/**
+ * 
+ * @returns {string}
+ */
+/* @__NO_SIDE_EFFECTS__ */
+export const result = () => `Result`
 
-export { passed } from "./pt-BR.js"
 
-export { failed } from "./pt-BR.js"
+/**
+ * 
+ * @returns {string}
+ */
+/* @__NO_SIDE_EFFECTS__ */
+export const passed = () => `Approved`
 
-export { score } from "./pt-BR.js"
 
-export { question } from "./pt-BR.js"
+/**
+ * 
+ * @returns {string}
+ */
+/* @__NO_SIDE_EFFECTS__ */
+export const failed = () => `Failed`
 
-export { correctAnswer } from "./pt-BR.js"
 
-export { submitAnswers } from "./pt-BR.js"
+/**
+ * 
+ * @returns {string}
+ */
+/* @__NO_SIDE_EFFECTS__ */
+export const score = () => `Score`
 
-export { startOver } from "./pt-BR.js"
 
-export { questionNavigation } from "./pt-BR.js"
+/**
+ * @param {{ number: NonNullable<unknown> }} params
+ * @returns {string}
+ */
+/* @__NO_SIDE_EFFECTS__ */
+export const question = (params) => `Question ${params.number}`
 
-export { previous } from "./pt-BR.js"
 
-export { next } from "./pt-BR.js"
+/**
+ * @param {{ answer: NonNullable<unknown> }} params
+ * @returns {string}
+ */
+/* @__NO_SIDE_EFFECTS__ */
+export const correctAnswer = (params) => `Correct answer: ${params.answer}`
+
+
+/**
+ * 
+ * @returns {string}
+ */
+/* @__NO_SIDE_EFFECTS__ */
+export const submitAnswers = () => `Submit Responses`
+
+
+/**
+ * 
+ * @returns {string}
+ */
+/* @__NO_SIDE_EFFECTS__ */
+export const startOver = () => `Start over`
+
+
+/**
+ * 
+ * @returns {string}
+ */
+/* @__NO_SIDE_EFFECTS__ */
+export const questionNavigation = () => `Question navigation`
+
+
+/**
+ * 
+ * @returns {string}
+ */
+/* @__NO_SIDE_EFFECTS__ */
+export const previous = () => `Previous`
+
+
+/**
+ * 
+ * @returns {string}
+ */
+/* @__NO_SIDE_EFFECTS__ */
+export const next = () => `Next`

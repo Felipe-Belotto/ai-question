@@ -2,7 +2,7 @@
 import { useLanguage } from "@/context/LanguageContext";
 import * as m from "@/paraglide/messages.js";
 import { motion } from "framer-motion";
-import React, { ReactElement, useState } from "react";
+import React, { useState } from "react";
 import HowItWorksSection from "./layout/landing/HowItWorksSection";
 import PromptInputSection from "./layout/landing/PromptInputSection";
 import WelcomeSection from "./layout/landing/WelcomeSection";
