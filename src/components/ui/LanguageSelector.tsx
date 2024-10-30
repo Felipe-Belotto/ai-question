@@ -69,7 +69,12 @@ export function LanguageSelector() {
             className="focus:bg-primary/10 cursor-pointer"
           >
             <div className="flex items-center gap-2">
-              <img src={flagUrl} alt={label} className="w-5 h-5 rounded-full" />
+              <Image   
+               src={flagUrl}
+                    alt={label}
+                    className="object-contain"
+                    width={24}
+                    height={24} />
               <span>{label}</span>
             </div>
           </SelectItem>
