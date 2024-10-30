@@ -1,7 +1,7 @@
 "use client";
 import { CardHeader, CardTitle } from "@/components/ui/card";
 import { useLanguage } from "@/context/LanguageContext";
-import * as m from "@/paraglide/messages.js";
+import * as m from "@paraglide/messages";
 
 interface QuizHeaderProps {
   topic: string;

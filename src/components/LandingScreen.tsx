@@ -1,6 +1,6 @@
 "use client";
 import { useLanguage } from "@/context/LanguageContext";
-import * as m from "@/paraglide/messages.js";
+import * as m from "@paraglide/messages";
 import { motion } from "framer-motion";
 import React, { useState } from "react";
 import HowItWorksSection from "./layout/landing/HowItWorksSection";
@@ -70,7 +70,7 @@ const LandingScreen = ({
 export default LandingScreen;
 
 type sectionSeparatorProps = {
-  text: any;
+  text: string;
 };
 
 function SectionSeparator({ text }: sectionSeparatorProps) {

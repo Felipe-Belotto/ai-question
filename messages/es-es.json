@@ -1,6 +1,6 @@
 {
   "$schema": "https://inlang.com/schema/inlang-message-format",
-  "howItWorks": "como funciona",
+  "howItWorks": "Como funciona",
   "creatorInfo": "Información del desarrollador",
   "welcome": "Bienvenido a ",
   "welcomeMessage": "Genera exámenes personalizados con inteligencia artificial para mejorar el aprendizaje.",

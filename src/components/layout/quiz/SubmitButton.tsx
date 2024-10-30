@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { useLanguage } from "@/context/LanguageContext";
-import * as m from "@/paraglide/messages.js";
+import * as m from "@paraglide/messages";
 import { useEffect, useRef } from "react";
 
 interface SubmitButtonProps {

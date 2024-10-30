@@ -15,7 +15,7 @@
  * @returns {string}
  */
 /* @__NO_SIDE_EFFECTS__ */
-export const howItWorks = () => `como funciona`
+export const howItWorks = () => `Como funciona`
 
 
 /**

@@ -1,6 +1,6 @@
 "use client";
 import { useLanguage } from "@/context/LanguageContext";
-import * as m from "@/paraglide/messages.js";
+import * as m from "@paraglide/messages";
 
 interface QuestionNumberProps {
   number: number;

@@ -1,5 +1,5 @@
 import { useLanguage } from "@/context/LanguageContext";
-import * as m from "@/paraglide/messages.js";
+import * as m from "@paraglide/messages";
 
 interface ReviewPanelProps {
   score: number;

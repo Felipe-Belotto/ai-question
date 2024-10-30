@@ -1,7 +1,7 @@
 import { Question, SelectedAnswers } from "@/types/quiz";
 import { QuestionNumber } from "./QuestionNumber";
 import { Option } from "@/components/Option";
-import * as m from "@/paraglide/messages.js";
+import * as m from "@paraglide/messages";
 import { useLanguage } from "@/context/LanguageContext";
 
 interface QuestionContentProps {

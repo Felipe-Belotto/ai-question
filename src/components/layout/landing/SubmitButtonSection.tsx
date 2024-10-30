@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import * as m from "@/paraglide/messages.js";
+import * as m from "@paraglide/messages";
 import { motion } from "framer-motion";
 import { ChevronRight } from "lucide-react";
 

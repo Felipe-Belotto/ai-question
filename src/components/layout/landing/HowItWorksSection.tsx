@@ -1,5 +1,5 @@
 import React from "react";
-import * as m from "@/paraglide/messages.js";
+import * as m from "@paraglide/messages";
 import { ClipboardCheck, Edit, ListChecks } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 

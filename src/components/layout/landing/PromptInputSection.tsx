@@ -1,5 +1,5 @@
 import { Textarea } from "@/components/ui/textarea";
-import * as m from "@/paraglide/messages.js";
+import * as m from "@paraglide/messages";
 import { motion } from "framer-motion";
 import { Rocket, Sparkles } from "lucide-react";
 import SubmitButtonSection from "./SubmitButtonSection";

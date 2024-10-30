@@ -1,6 +1,6 @@
 "use client";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import * as m from "@/paraglide/messages.js";
+import * as m from "@paraglide/messages";
 import { QuestionGrid } from "./QuestionGrid";
 import { ReviewPanel } from "./ReviewPanel";
 import { SubmitButton } from "./SubmitButton";

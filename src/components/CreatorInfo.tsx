@@ -1,4 +1,4 @@
-import * as m from "@/paraglide/messages.js";
+import * as m from "@paraglide/messages";
 import { motion } from "framer-motion";
 import Image from "next/image";
 
