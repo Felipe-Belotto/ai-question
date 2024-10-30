@@ -1,3 +1,4 @@
+// context/LanguageContext.tsx
 "use client";
 import { setLanguageTag } from "@/paraglide/runtime";
 import {
@@ -27,7 +28,9 @@ const setLanguageSafely = (
   lang: SupportedLanguageTag
 ): SupportedLanguageTag => {
   try {
-    setLanguageTag(lang);
+    if (typeof window !== "undefined") {
+      setLanguageTag(lang);
+    }
     return lang;
   } catch (error) {
     console.error("Error setting language tag:", error);
@@ -38,12 +41,15 @@ const setLanguageSafely = (
 export const LanguageProvider: FC<{ children: ReactNode }> = ({ children }) => {
   const [language, setLanguageState] =
     useState<SupportedLanguageTag>(DEFAULT_LANGUAGE);
+  const [isClient, setIsClient] = useState(false);
 
   useEffect(() => {
+    setIsClient(true);
+
     if (typeof navigator !== "undefined") {
-      const browserLang = navigator.language.toLowerCase();
+      const browserLang = navigator.language;
       const supportedLang = SUPPORTED_LANGUAGES.find((lang) =>
-        browserLang.startsWith(lang.split("-")[0])
+        browserLang.toLowerCase().startsWith(lang.split("-")[0].toLowerCase())
       );
       setLanguageState(setLanguageSafely(supportedLang || DEFAULT_LANGUAGE));
     }
@@ -52,6 +58,17 @@ export const LanguageProvider: FC<{ children: ReactNode }> = ({ children }) => {
   const setLanguage = (lang: SupportedLanguageTag) => {
     setLanguageState(setLanguageSafely(lang));
   };
+
+  // Se não estivermos no cliente, renderize com o idioma padrão
+  if (!isClient) {
+    return (
+      <LanguageContext.Provider
+        value={{ language: DEFAULT_LANGUAGE, setLanguage }}
+      >
+        {children}
+      </LanguageContext.Provider>
+    );
+  }
 
   return (
     <LanguageContext.Provider value={{ language, setLanguage }}>
