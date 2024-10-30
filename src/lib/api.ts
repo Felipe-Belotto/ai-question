@@ -1,112 +1,112 @@
+import { languageTag } from "@/paraglide/runtime";
 import type { Question } from "@/types/quiz";
 import { GoogleGenerativeAI } from "@google/generative-ai";
 
 export async function validateKey() {
-	const key = process.env.NEXT_PUBLIC_GEMINI_KEY;
-	// biome-ignore lint/style/noNonNullAssertion: <explanation>
-	const genAI = new GoogleGenerativeAI(key!);
-	const model = genAI.getGenerativeModel({ model: "gemini-pro" });
+  const key = process.env.NEXT_PUBLIC_GEMINI_KEY;
 
-	const chat = model.startChat({
-		generationConfig: {
-			maxOutputTokens: 100,
-		},
-	});
+  const genAI = new GoogleGenerativeAI(key!);
+  const model = genAI.getGenerativeModel({ model: "gemini-pro" });
 
-	try {
-		const result = await chat.sendMessage(
-			"If you are reading this message, respond with exactly 'All good' without any punctuation or additional text",
-		);
-		const response = await result.response;
-		const text = await response.text();
-		return text === "All good";
-	} catch (error) {
-		console.error(error);
-		return false;
-	}
+  const chat = model.startChat({
+    generationConfig: {
+      maxOutputTokens: 100,
+    },
+  });
+
+  try {
+    const result = await chat.sendMessage(
+      "If you are reading this message, respond with exactly 'All good' without any punctuation or additional text"
+    );
+    const response = await result.response;
+    const text = await response.text();
+    return text === "All good";
+  } catch (error) {
+    console.error(error);
+    return false;
+  }
 }
 
 export async function generateQuiz(
-	msg: string,
-	language = "en",
+  msg: string,
+  language = "en"
 ): Promise<Question[]> {
-	const key = process.env.NEXT_PUBLIC_GEMINI_KEY;
-	// biome-ignore lint/style/noNonNullAssertion: <explanation>
-	const genAI = new GoogleGenerativeAI(key!);
-	const model = genAI.getGenerativeModel({ model: "gemini-1.5-pro-latest" });
+  const key = process.env.NEXT_PUBLIC_GEMINI_KEY;
+  const genAI = new GoogleGenerativeAI(key!);
+  const model = genAI.getGenerativeModel({ model: "gemini-1.5-pro-latest" });
 
-	const chat = model.startChat({
-		generationConfig: {
-			maxOutputTokens: 100000,
-		},
-	});
+  const chat = model.startChat({
+    generationConfig: {
+      maxOutputTokens: 100000,
+    },
+  });
 
-	const defaultMessage =
-		language === "en"
-			? "Topics related to elementary and high school education"
-			: "Temas relacionados ao ensino fundamental e médio";
+  const defaultMessage =
+    language === "en"
+      ? "Topics related to elementary and high school education"
+      : "Temas relacionados ao ensino fundamental e médio";
 
-	const message = msg || defaultMessage;
+  const message = msg || defaultMessage;
 
-	try {
-		const result =
-			await chat.sendMessage(`Crie 10 perguntas de múltipla escolha sobre ${message} com 5 alternativas cada. Cada pergunta deve ter apenas uma resposta correta. Ao selecionar perguntas sempre escolhas a que possui certeza que estão corretas por exemplo se for relacionado ao meio academico, procure questões que cairam em faculdades ou provas de escola, caso não seja do meio academico, procure informações confiaveis para gerar as questões . Retorne o resultado em formato JSON mas tenha consciencia que o resultado da sua resposta passara pela função JSON.parse então envie de acordo com os requisitos necessarios para ela nao dar erro, não retorne em codeblock, não irei visualizar, mande somente [{},] o array e os objetos que compõem o JSON, Certifique-se que alternativas: será sempre um array e nunca uma string e que as alternativas não estão dentro de arrays adicionais, o que tornara a estrutura inválida. O JSON espera que as alternativas sejam um array direto, não um array de arrays. Resposta nunca será uma string vazia. Se atente para nunca faltar aspas necessárias para manter a aplicação estavel.Caso seja perguntado de Star Wars, não de sempre as questões do exemplo abaixo sempre tente ser criativo. Cuidado com SyntaxError pois irei usar o seu retorno para transformar em json.parse() .Você vai retornar como nesse exemplo:[
+  try {
+    const result =
+      await chat.sendMessage(`Create 10 multiple choice questions about ${message} with 5 alternatives each. Each question must have only one correct answer. When selecting questions, always choose ones that you are certain are correct - for example, if related to academia, look for questions that appeared in college or school exams; if not academic, use reliable sources to generate the questions. Return the result in JSON format but be aware that your response will go through the JSON.parse function, so send according to the necessary requirements to avoid errors. Do not return in a codeblock, I will not visualize it, send only [{},] the array and objects that make up the JSON. Make sure that alternatives: will always be an array and never a string, and that the alternatives are not inside additional arrays, which would make the structure invalid. The JSON expects alternatives to be a direct array, not an array of arrays. Answer will never be an empty string. Pay attention to never missing quotes necessary to keep the application stable. If asked about Star Wars, don't always give the questions from the example below, always try to be creative. Be careful with SyntaxError as I will use your return to transform into json.parse(). The language of the questions and answers should be in ${languageTag()}. You will return as in this example:[ 
 			{
-				"enunciado": "Qual é o nome do planeta natal de Luke Skywalker?",
-				"alternativas": ["Tatooine", "Alderaan", "Naboo", "Coruscant", "Endor"],
-				"resposta": "Tatooine"
+					"statement": "What is the name of Luke Skywalker's home planet?",
+					"options": ["Tatooine", "Alderaan", "Naboo", "Coruscant", "Endor"],
+					"answer": "Tatooine"
 			},
 			{
-				"enunciado": "Quem é o líder da rebelião contra o Império?",
-				"alternativas": ["Darth Vader", "Obi-Wan Kenobi", "Mon Mothma", "Han Solo", "Yoda"],
-				"resposta": "Mon Mothma"
+					"statement": "Who is the leader of the rebellion against the Empire?",
+					"options": ["Darth Vader", "Obi-Wan Kenobi", "Mon Mothma", "Han Solo", "Yoda"],
+					"answer": "Mon Mothma"
 			},
 			{
-				"enunciado": "Qual é a arma característica de Han Solo?",
-				"alternativas": ["Sabre de luz", "Blaster", "Pistola", "Arco e flecha", "Espada"],
-				"resposta": "Blaster"
+					"statement": "What is Han Solo's characteristic weapon?",
+					"options": ["Lightsaber", "Blaster", "Pistol", "Bow and arrow", "Sword"],
+					"answer": "Blaster"
 			},
 			{
-				"enunciado": "Qual é o nome da nave espacial de Han Solo?",
-				"alternativas": ["Millennium Falcon", "X-Wing", "TIE Fighter", "Death Star", "Y-Wing"],
-				"resposta": "Millennium Falcon"
+					"statement": "What is the name of Han Solo's spaceship?",
+					"options": ["Millennium Falcon", "X-Wing", "TIE Fighter", "Death Star", "Y-Wing"],
+					"answer": "Millennium Falcon"
 			},
 			{
-				"enunciado": "Quem é o mestre Jedi que treina Luke Skywalker?",
-				"alternativas": ["Yoda", "Obi-Wan Kenobi", "Qui-Gon Jinn", "Mace Windu", "Palpatine"],
-				"resposta": "Obi-Wan Kenobi"
+					"statement": "Who is the Jedi Master that trains Luke Skywalker?",
+					"options": ["Yoda", "Obi-Wan Kenobi", "Qui-Gon Jinn", "Mace Windu", "Palpatine"],
+					"answer": "Obi-Wan Kenobi"
 			},
 			{
-				"enunciado": "Qual é o nome do planeta onde a base rebelde é localizada?",
-				"alternativas": ["Endor", "Hoth", "Yavin IV", "Dagobah", "Tatooine"],
-				"resposta": "Yavin IV"
+					"statement": "What is the name of the planet where the rebel base is located?",
+					"options": ["Endor", "Hoth", "Yavin IV", "Dagobah", "Tatooine"],
+					"answer": "Yavin IV"
 			},
 			{
-				"enunciado": "Qual é o nome do famoso caçador de recompensas que persegue Han Solo?",
-				"alternativas": ["Boba Fett", "Jabba the Hutt", "Lando Calrissian", "Greedo", "Wicket"],
-				"resposta": "Boba Fett"
+					"statement": "What is the name of the famous bounty hunter who pursues Han Solo?",
+					"options": ["Boba Fett", "Jabba the Hutt", "Lando Calrissian", "Greedo", "Wicket"],
+					"answer": "Boba Fett"
 			},
 			{
-				"enunciado": "Qual é a principal arma do Império?",
-				"alternativas": ["Death Star", "TIE Fighter", "Super Star Destroyer", "AT-AT", "TIE Bomber"],
-				"resposta": "Death Star"
+					"statement": "What is the Empire's main weapon?",
+					"options": ["Death Star", "TIE Fighter", "Super Star Destroyer", "AT-AT", "TIE Bomber"],
+					"answer": "Death Star"
 			},
 			{
-				"enunciado": "Qual é o nome do planeta onde Luke Skywalker encontra Yoda?",
-				"alternativas": ["Dagobah", "Hoth", "Tatooine", "Endor", "Naboo"],
-				"resposta": "Dagobah"
+					"statement": "What is the name of the planet where Luke Skywalker finds Yoda?",
+					"options": ["Dagobah", "Hoth", "Tatooine", "Endor", "Naboo"],
+					"answer": "Dagobah"
 			},
 			{
-				"enunciado": "Qual é o nome do planeta onde a corrida de pods acontece?",
-				"alternativas": ["Tatooine", "Naboo", "Coruscant", "Alderaan", "Endor"],
-				"resposta": "Tatooine"
+					"statement": "What is the name of the planet where the pod race takes place?",
+					"options": ["Tatooine", "Naboo", "Coruscant", "Alderaan", "Endor"],
+					"answer": "Tatooine"
 			}
-		]`);
-		const response = await result.response;
-		const text = await response.text();
-		return JSON.parse(text.trim());
-	} catch (error) {
-		console.error("Error parsing JSON:", error);
-		throw new Error("Failed to generate quiz");
-	}
+	]`);
+    const response = await result.response;
+    const text = await response.text();
+    return JSON.parse(text.trim());
+  } catch (error) {
+    console.error("Error parsing JSON:", error);
+    throw new Error("Failed to generate quiz");
+  }
 }

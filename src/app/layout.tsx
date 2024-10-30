@@ -1,38 +1,104 @@
+import { languageTag } from "@/paraglide/runtime.js";
 import type { Metadata } from "next";
-import localFont from "next/font/local";
+import { Nunito } from "next/font/google";
 import "./globals.css";
 import { Header } from "@/components/Header";
+import { LanguageProvider } from "@/context/LanguageContext";
 
-const geistSans = localFont({
-	src: "./fonts/GeistVF.woff",
-	variable: "--font-geist-sans",
-	weight: "100 900",
-});
-
-const geistMono = localFont({
-	src: "./fonts/GeistMonoVF.woff",
-	variable: "--font-geist-mono",
-	weight: "100 900",
+const nunito = Nunito({
+  subsets: ["latin"],
+  display: "swap",
 });
 
 export const metadata: Metadata = {
-	title: "AI Question - Learn with AI",
-	description: "Test your knowledge and learn with AI-powered questions",
+  title: "AI Question - Free Exam Generator with AI",
+  description:
+    "Generate custom exams on any topic with AI. Test your knowledge with AI-powered questions and boost your learning for free.",
+  keywords: [
+    "AI questions",
+    "exam generator",
+    "AI learning",
+    "AI study tool",
+    "free exams",
+    "online exams",
+    "AI education",
+    "AI Question",
+  ],
+  authors: [{ name: "Felipe Belotto" }],
+  creator: "Felipe Belotto",
+  publisher: "AI Question",
+  applicationName: "AI Question",
+  icons: {
+    icon: "/logo.png",
+  },
+  appleWebApp: {
+    capable: true,
+    title: "AI Question",
+    statusBarStyle: "default",
+  },
+  formatDetection: {
+    telephone: false,
+  },
+  openGraph: {
+    title: "AI Question - Free Exam Generator with AI",
+    description:
+      "Create personalized exams on any subject with the power of AI. AI Question offers a free and easy way to test your knowledge.",
+    siteName: "AI Question",
+    images: {
+      url: "/logo.png",
+      width: 1200,
+      height: 800,
+      alt: "AI Question - Free Exam Generator",
+    },
+    locale: "en_US",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "AI Question - Free Exam Generator with AI",
+    description:
+      "AI Question allows you to create and take exams on any topic. Test your knowledge and learn with AI-powered questions for free.",
+    creator: "@felipebelotto",
+    images: {
+      url: "/logo.png",
+      alt: "AI Question - Free Exam Generator",
+    },
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
+  alternates: {
+    canonical: "",
+  },
+  category: "education",
+  other: {
+    "mobile-web-app-capable": "yes",
+  },
 };
 
 export default function RootLayout({
-	children,
+  children,
 }: Readonly<{
-	children: React.ReactNode;
+  children: React.ReactNode;
 }>) {
-	return (
-		<html lang="en" className="h-full">
-			<body
-				className={`${geistSans.variable} ${geistMono.variable} antialiased min-h-screen bg-background flex flex-col`}
-			>
-				<Header />
-				{children}
-			</body>
-		</html>
-	);
+  return (
+    <LanguageProvider>
+      <html lang={languageTag()} className="h-full">
+        <body
+          className={`${nunito.className} antialiased min-h-screen bg-background flex flex-col`}
+        >
+          <Header />
+          {children}
+        </body>
+      </html>
+    </LanguageProvider>
+  );
 }

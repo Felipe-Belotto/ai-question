@@ -1,46 +1,65 @@
+import React from "react";
+import * as m from "@/paraglide/messages.js";
 import { ClipboardCheck, Edit, ListChecks } from "lucide-react";
+import { Card, CardContent } from "@/components/ui/card";
 
-const HowItWorksSection = () => (
-	<div className="mt-16 w-full max-w-4xl grid grid-cols-1 md:grid-cols-3 gap-8">
-		{/* Step 1: Choose Topic */}
-		<div className="flex flex-col items-center text-center space-y-4">
-			<div className="p-4 rounded-full bg-primary/10">
-				<Edit className="w-8 h-8 text-primary" />
-			</div>
-			<h3 className="text-xl font-medium text-primary">
-				Step 1: Choose Your Topic
-			</h3>
-			<p className="text-muted-foreground">
-				Start by selecting the topic you're interested in exploring.
-			</p>
-		</div>
+interface StepCardProps {
+  icon: React.ComponentType<React.SVGProps<SVGSVGElement>>;
+  title: string;
+  description: string;
+}
 
-		{/* Step 2: Enter Prompt */}
-		<div className="flex flex-col items-center text-center space-y-4">
-			<div className="p-4 rounded-full bg-primary/10">
-				<ListChecks className="w-8 h-8 text-primary" />
-			</div>
-			<h3 className="text-xl font-medium text-primary">
-				Step 2: Enter Your Prompt
-			</h3>
-			<p className="text-muted-foreground">
-				Type a specific prompt or question about the chosen topic.
-			</p>
-		</div>
-
-		{/* Step 3: Generate Your Exam */}
-		<div className="flex flex-col items-center text-center space-y-4">
-			<div className="p-4 rounded-full bg-primary/10">
-				<ClipboardCheck className="w-8 h-8 text-primary" />
-			</div>
-			<h3 className="text-xl font-medium text-primary">
-				Step 3: Receive Your Exam
-			</h3>
-			<p className="text-muted-foreground">
-				The platform generates a 10-question exam tailored to your topic.
-			</p>
-		</div>
-	</div>
+const StepCard: React.FC<StepCardProps> = ({
+  icon: Icon,
+  title,
+  description,
+}) => (
+  <Card className="flex-1 bg-transparent border-primary/10">
+    <CardContent className="pt-6">
+      <div className="mb-4">
+        <div className="h-12 w-12 rounded-lg bg-primary/10 flex items-center justify-center">
+          <Icon className="h-6 w-6 text-primary" />
+        </div>
+      </div>
+      <h3 className="text-lg font-semibold mb-2">{title}</h3>
+      <p className="text-muted-foreground">{description}</p>
+    </CardContent>
+  </Card>
 );
+
+const HowItWorksSection = () => {
+  const steps = [
+    {
+      icon: ClipboardCheck,
+      title: m.step1Title(),
+      description: m.step1Description(),
+    },
+    {
+      icon: Edit,
+      title: m.step2Title(),
+      description: m.step2Description(),
+    },
+    {
+      icon: ListChecks,
+      title: m.step3Title(),
+      description: m.step3Description(),
+    },
+  ];
+
+  return (
+    <section className="min-h-[30vh] lg:min-h-[40vh]  flex items-center justify-center">
+      <div className="grid gap-6 md:grid-cols-3">
+        {steps.map((step, index) => (
+          <StepCard
+            key={index}
+            icon={step.icon}
+            title={step.title}
+            description={step.description}
+          />
+        ))}
+      </div>
+    </section>
+  );
+};
 
 export default HowItWorksSection;

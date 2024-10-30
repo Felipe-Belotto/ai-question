@@ -1,4 +1,5 @@
 import { Button } from "@/components/ui/button";
+import * as m from "@/paraglide/messages.js";
 import { motion } from "framer-motion";
 import { ChevronRight } from "lucide-react";
 
@@ -36,16 +37,16 @@ const SubmitButtonSection = ({
 						}}
 						className="flex items-center gap-3"
 					>
-						<span>Creating your journey</span>
+						<span>{m.submitWaitingMessage()}</span>
 						<motion.div className="w-5 h-5 border-3 border-white border-t-transparent rounded-full animate-[rotate_1s_linear_infinite]" />
 					</motion.div>
 				) : hasError ? (
 					<div className="flex items-center gap-2 text-red-50">
-						<span>Something went wrong - Try again</span>
+						<span>{m.somethingWrong()}</span>
 					</div>
 				) : (
 					<div className="flex items-center gap-3 justify-center">
-						<span>Start Quiz</span>
+						<span>{m.startQuiz()}</span>
 						<motion.div
 							className="group-hover:translate-x-2 transition-transform"
 							animate={{ x: [0, 4, 0] }}
