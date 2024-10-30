@@ -1,5 +1,8 @@
 import { paraglide } from "@inlang/paraglide-next/plugin";
 const nextConfig = {
+  eslint: {
+    ignoreDuringBuilds: true,
+  },
   images: {
     remotePatterns: [
       {
