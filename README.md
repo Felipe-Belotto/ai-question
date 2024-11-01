@@ -18,4 +18,3 @@ O AI Question é uma ferramenta inovadora que utiliza a inteligência artificial
 * **Flexibilidade:** Adapte as provas às suas necessidades específicas.
 * **Acessibilidade:** Disponível em múltiplos idiomas para atender a uma diversidade de alunos.
 
-**Comece a usar o AI Question hoje mesmo e revolucione a forma como você cria suas provas!** <a href="https://ai-question.vercel.app/" style="background-color:#f29f40; color:white; padding:10px;">Começar a Usar</a>
