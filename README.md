@@ -1,36 +1,21 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# <span style="background-color:#f29f40; color:white;">AI Question</span>: Sua Ferramenta Personalizada de Criação de Provas
 
-## Getting Started
+**Crie provas personalizadas com facilidade e rapidez.**
 
-First, run the development server:
+O AI Question é uma ferramenta inovadora que utiliza a inteligência artificial para gerar provas e questionários de forma automática e eficiente. Ideal para professores, educadores e estudantes, o AI Question simplifica a criação de avaliações personalizadas, permitindo que você se concentre no conteúdo a ser ensinado.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+### <span style="color:#f29f40;">Recursos Principais</span>
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+* **Geração Automática de Perguntas:** Crie uma variedade de perguntas em diferentes formatos, como múltipla escolha, verdadeiro ou falso e dissertativas.
+* **Personalização Completa:** Adapte as provas às suas necessidades específicas, escolhendo o nível de dificuldade, o tema e o número de questões.
+* **Interface Intuitiva:** Navegue facilmente pela plataforma e crie suas provas de forma rápida e intuitiva.
+* **Suporte a Múltiplos Idiomas:** Alcance um público global com a geração de provas em diferentes idiomas.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### <span style="color:#f29f40;">Benefícios</span>
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+* **Economia de Tempo:** Diga adeus às horas gastas criando provas manualmente.
+* **Aumento da Qualidade:** Garanta a qualidade das suas avaliações com perguntas geradas por inteligência artificial.
+* **Flexibilidade:** Adapte as provas às suas necessidades específicas.
+* **Acessibilidade:** Disponível em múltiplos idiomas para atender a uma diversidade de alunos.
 
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+**Comece a usar o AI Question hoje mesmo e revolucione a forma como você cria suas provas!** <a href="https://ai-question.vercel.app/" style="background-color:#f29f40; color:white; padding:10px;">Começar a Usar</a>
