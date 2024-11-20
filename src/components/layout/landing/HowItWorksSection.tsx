@@ -14,7 +14,6 @@ const StepCard: React.FC<StepCardProps> = ({
   icon: Icon,
   title,
   description,
-  index,
 }) => (
   <Card className="flex-1 bg-transparent border-primary/10 hover:border-primary/30 transition-colors group">
     <CardContent className="pt-6">
