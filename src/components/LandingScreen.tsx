@@ -77,7 +77,7 @@ function SectionSeparator({ text }: sectionSeparatorProps) {
   return (
     <div className="relative flex justify-center items-center mb-14">
       <hr className="border-primary/20 w-full" />
-      <div className="absolute bg-background px-4 text-primary font-semibold ">
+      <div className="absolute bg-background px-4 text-secondary font-semibold ">
         {text}
       </div>
     </div>

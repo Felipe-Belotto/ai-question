@@ -28,7 +28,7 @@ export const QuestionGrid = ({
             ? "bg-primary text-white"
             : selectedAnswers[index]
               ? "bg-primary/20"
-              : "bg-gray-100"
+              : "bg-primary/20"
         } ${
           isReview && correctAnswers[index] && "bg-green-500 hover:bg-green-600"
         } ${

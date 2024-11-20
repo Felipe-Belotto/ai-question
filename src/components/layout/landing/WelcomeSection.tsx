@@ -10,12 +10,12 @@ const WelcomeSection = () => (
         animate={{ rotate: 360 }}
         transition={{ duration: 20, repeat: Number.POSITIVE_INFINITY }}
       >
-        <Star className="w-12 h-12" />
+        <Star className="w-12 h-12 text-secondary" />
       </motion.div>
       <h1 className="text-4xl md:text-6xl font-bold text-primary ">
         {m.welcome()}
         <br />
-        <strong className="animate-pulse">AI Question</strong>
+        <strong className="animate-pulse text-secondary">AI Question</strong>
       </h1>
     </div>
 

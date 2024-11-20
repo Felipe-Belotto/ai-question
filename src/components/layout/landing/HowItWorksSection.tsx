@@ -7,22 +7,26 @@ interface StepCardProps {
   icon: React.ComponentType<React.SVGProps<SVGSVGElement>>;
   title: string;
   description: string;
+  index: number;
 }
 
 const StepCard: React.FC<StepCardProps> = ({
   icon: Icon,
   title,
   description,
+  index,
 }) => (
-  <Card className="flex-1 bg-transparent border-primary/10">
+  <Card className="flex-1 bg-transparent border-primary/10 hover:border-primary/30 transition-colors group">
     <CardContent className="pt-6">
       <div className="mb-4">
-        <div className="h-12 w-12 rounded-lg bg-primary/10 flex items-center justify-center">
-          <Icon className="h-6 w-6 text-primary" />
+        <div className="h-12 w-12 rounded-lg bg-primary/80 flex items-center justify-center transition-colors">
+          <Icon className="h-6 w-6 text-background transition-colors" />
         </div>
       </div>
-      <h3 className="text-lg font-semibold mb-2">{title}</h3>
-      <p className="text-muted-foreground">{description}</p>
+      <h3 className="text-lg text-primary font-semibold mb-2 transition-colors">
+        {title}
+      </h3>
+      <p className="text-muted-foreground  transition-colors">{description}</p>
     </CardContent>
   </Card>
 );
@@ -47,16 +51,19 @@ const HowItWorksSection = () => {
   ];
 
   return (
-    <section className="min-h-[30vh] lg:min-h-[40vh]  flex items-center justify-center">
-      <div className="grid gap-6 md:grid-cols-3">
-        {steps.map((step, index) => (
-          <StepCard
-            key={index}
-            icon={step.icon}
-            title={step.title}
-            description={step.description}
-          />
-        ))}
+    <section className="min-h-[30vh] lg:min-h-[40vh] flex items-center justify-center">
+      <div className="container text-secondary">
+        <div className="grid gap-6 md:grid-cols-3">
+          {steps.map((step, index) => (
+            <StepCard
+              key={index}
+              icon={step.icon}
+              title={step.title}
+              description={step.description}
+              index={index}
+            />
+          ))}
+        </div>
       </div>
     </section>
   );

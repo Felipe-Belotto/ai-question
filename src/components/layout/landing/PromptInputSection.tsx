@@ -21,7 +21,7 @@ const PromptInputSection = ({
 }: PromptInputSectionProps) => (
   <div className="bg-background/40 p-8 rounded-xl border border-primary/10 backdrop-blur-sm relative w-full max-w-2xl shadow-lg">
     <motion.div className="absolute -top-4 -right-4 text-primary/40 animate-[rotate_4s_ease-in-out_infinite]">
-      <Sparkles className="w-8 h-8" />
+      <Sparkles className="w-8 h-8 text-secondary" />
     </motion.div>
     <label className="block text-center text-xl mb-8 font-medium text-primary">
       {m.inputPromptMessage()}

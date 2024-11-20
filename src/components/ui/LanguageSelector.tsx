@@ -41,11 +41,11 @@ export function LanguageSelector() {
 
   return (
     <Select value={languageTag()} onValueChange={handleLanguageChange}>
-      <SelectTrigger className="bg-primary/5 border-primary/10 backdrop-blur-sm">
-        <div className="flex items-center gap-2">
+      <SelectTrigger className="bg-transparent border-primary/10 backdrop-blur-sm">
+        <div className="flex items-center gap-2 ">
           <SelectValue
             placeholder={
-              <span className="flex items-center gap-2">
+              <span className="flex items-center gap-2 ">
                 {currentLanguage && (
                   <Image
                     src={currentLanguage.flagUrl}
@@ -69,12 +69,13 @@ export function LanguageSelector() {
             className="focus:bg-primary/10 cursor-pointer"
           >
             <div className="flex items-center gap-2">
-              <Image   
-               src={flagUrl}
-                    alt={label}
-                    className="object-contain"
-                    width={24}
-                    height={24} />
+              <Image
+                src={flagUrl}
+                alt={label}
+                className="object-contain"
+                width={24}
+                height={24}
+              />
               <span>{label}</span>
             </div>
           </SelectItem>
