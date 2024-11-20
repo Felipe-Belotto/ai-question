@@ -29,8 +29,8 @@ function detectLanguage(request: NextRequest): SupportedLanguageTag {
 
 export function middleware(request: NextRequest) {
   const lang = detectLanguage(request);
-  request.headers.set("accept-language", lang); 
-  return paraglide(request); 
+  request.headers.set("accept-language", lang);
+  return paraglide(request);
 }
 
 export const config = {
