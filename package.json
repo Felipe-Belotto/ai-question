@@ -3,8 +3,8 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "paraglide-js compile --project ./project.inlang --outdir ./src/paraglide && next dev --turbopack",
-    "build": "paraglide-js compile --project ./project.inlang --outdir ./src/paraglide && next build",
+    "dev": "npx @inlang/paraglide-js compile --project ./project.inlang --outdir ./src/paraglide && next dev --turbopack",
+    "build": "npx @inlang/paraglide-js compile --project ./project.inlang --outdir ./src/paraglide && next build",
     "start": "next start",
     "lint": "next lint",
     "paraglide": "npx @inlang/paraglide-js compile --project ./project.inlang --outdir ./src/paraglide",
