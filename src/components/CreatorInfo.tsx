@@ -9,10 +9,10 @@ const CreatorInfo = () => {
         initial={{ opacity: 0, y: 10 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6 }}
-        className="w-full max-w-4xl bg-background border border-primary/10 rounded-xl shadow-sm transition-shadow duration-300 "
+        className="w-full max-w-4xl bg-background border border-primary/10 rounded-xl shadow-xs transition-shadow duration-300 "
       >
         <div className="p-4 lg:p-14 flex flex-col md:flex-row items-center gap-14">
-          <div className="relative w-36 h-36 rounded-full overflow-hidden shadow-md border-2 border-primary/20 flex-shrink-0">
+          <div className="relative w-36 h-36 rounded-full overflow-hidden shadow-md border-2 border-primary/20 shrink-0">
             <Image
               src="https://github.com/Felipe-Belotto.png"
               alt={m.creatorImageAlt()}

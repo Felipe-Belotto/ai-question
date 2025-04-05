@@ -1,5 +1,4 @@
 "use client";
-import { useLanguage } from "@/context/LanguageContext";
 import * as m from "@paraglide/messages";
 import { motion } from "framer-motion";
 import React, { useState } from "react";
@@ -19,7 +18,6 @@ const LandingScreen = ({
   isLoading,
   hasError,
 }: LandingScreenProps) => {
-  useLanguage();
   const [message, setMessage] = useState("");
   const floatingBubbles = Array(6).fill(null);
 

@@ -1,4 +1,3 @@
-import { useLanguage } from "@/context/LanguageContext";
 import * as m from "@paraglide/messages";
 
 interface ReviewPanelProps {
@@ -7,7 +6,6 @@ interface ReviewPanelProps {
 }
 
 export function ReviewPanel({ score, totalQuestions }: ReviewPanelProps) {
-  useLanguage();
   return (
     <div className="mt-4 space-y-2">
       <div className="p-3 bg-white/20 rounded-lg">

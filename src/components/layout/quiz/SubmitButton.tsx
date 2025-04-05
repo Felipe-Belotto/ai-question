@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { useLanguage } from "@/context/LanguageContext";
+
 import * as m from "@paraglide/messages";
 import { useEffect, useRef } from "react";
 
@@ -17,7 +17,7 @@ export const SubmitButton = ({
   isLastQuestion,
 }: SubmitButtonProps) => {
   const submitButtonRef = useRef<HTMLButtonElement>(null);
-  useLanguage();
+
   useEffect(() => {
     if (isLastQuestion && submitButtonRef.current) {
       submitButtonRef.current.scrollIntoView({ behavior: "smooth" });

@@ -2,7 +2,6 @@ import { Question, SelectedAnswers } from "@/types/quiz";
 import { QuestionNumber } from "./QuestionNumber";
 import { Option } from "@/components/Option";
 import * as m from "@paraglide/messages";
-import { useLanguage } from "@/context/LanguageContext";
 
 interface QuestionContentProps {
   question: Question;
@@ -19,7 +18,6 @@ export function QuestionContent({
   isReview,
   onSelect,
 }: QuestionContentProps) {
-  useLanguage();
   return (
     <div className="mb-8">
       <div className="mb-4">

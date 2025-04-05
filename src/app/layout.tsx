@@ -2,8 +2,7 @@ import type { Metadata } from "next";
 import { Nunito } from "next/font/google";
 import "./globals.css";
 import { Header } from "@/components/Header";
-import { LanguageProvider } from "@/context/LanguageContext";
-import { ClientHtml } from "@/components/ClientHtml";
+import { languageTag } from "@/paraglide/runtime";
 
 const nunito = Nunito({
   subsets: ["latin"],
@@ -39,7 +38,7 @@ export const metadata: Metadata = {
   formatDetection: {
     telephone: false,
   },
-  openGraph: {  
+  openGraph: {
     title: "AI Question - Free Exam Generator with AI",
     description:
       "Create personalized exams on any subject with the power of AI. AI Question offers a free and easy way to test your knowledge.",
@@ -80,15 +79,13 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <LanguageProvider>
-      <ClientHtml>
-        <body
-          className={`${nunito.className} antialiased min-h-screen bg-background flex flex-col`}
-        >
-          <Header />
-          {children}
-        </body>
-      </ClientHtml>
-    </LanguageProvider>
+    <html lang={languageTag()}>
+      <body
+        className={`${nunito.className} antialiased min-h-screen bg-background flex flex-col`}
+      >
+        <Header />
+        {children}
+      </body>
+    </html>
   );
 }

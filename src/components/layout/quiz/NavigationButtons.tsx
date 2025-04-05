@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { useLanguage } from "@/context/LanguageContext";
+
 import * as m from "@paraglide/messages";
 
 interface NavigationButtonsProps {
@@ -15,7 +15,6 @@ export function NavigationButtons({
   onPrevious,
   onNext,
 }: NavigationButtonsProps) {
-  useLanguage();
   return (
     <div className="flex justify-between mt-6">
       <Button

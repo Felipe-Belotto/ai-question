@@ -30,10 +30,10 @@ export const Option = ({
       onClick={() => !disabled && onSelect(questionIndex, index)}
       variant="ghost"
     >
-      <span className="flex-shrink-0 font-medium">{letter}</span>
-      <span className="flex-grow whitespace-normal">{text}</span>
+      <span className="shrink-0 font-medium">{letter}</span>
+      <span className="grow whitespace-normal">{text}</span>
       {disabled && isSelected && (
-        <span className="flex-shrink-0 ml-2">
+        <span className="shrink-0 ml-2">
           {isCorrect ? (
             <Check className="w-5 h-5 text-green-500" />
           ) : (

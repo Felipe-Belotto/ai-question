@@ -19,7 +19,7 @@ const PromptInputSection = ({
   hasError,
   handleSubmit,
 }: PromptInputSectionProps) => (
-  <div className="bg-background/40 p-8 rounded-xl border border-primary/10 backdrop-blur-sm relative w-full max-w-2xl shadow-lg">
+  <div className="bg-background/40 p-8 rounded-xl border border-primary/10 backdrop-blur-xs relative w-full max-w-2xl shadow-lg">
     <motion.div className="absolute -top-4 -right-4 text-primary/40 animate-[rotate_4s_ease-in-out_infinite]">
       <Sparkles className="w-8 h-8 text-secondary" />
     </motion.div>

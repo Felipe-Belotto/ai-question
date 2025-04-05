@@ -5,7 +5,6 @@ import { QuestionGrid } from "./QuestionGrid";
 import { ReviewPanel } from "./ReviewPanel";
 import { SubmitButton } from "./SubmitButton";
 import { CorrectAnswers, Question, SelectedAnswers } from "@/types/quiz";
-import { useLanguage } from "@/context/LanguageContext";
 
 interface NavigationPanelProps {
   questions: Question[];
@@ -30,7 +29,6 @@ export const NavigationPanel = ({
   onRestart,
   onValidate,
 }: NavigationPanelProps) => {
-  useLanguage();
   const isLastQuestion = currentQuestion === questions.length - 1;
 
   return (
