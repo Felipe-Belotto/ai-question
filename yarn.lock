@@ -225,6 +225,14 @@
   resolved "https://registry.yarnpkg.com/@img/sharp-win32-x64/-/sharp-win32-x64-0.33.5.tgz#56f00962ff0c4e0eb93d34a047d29fa995e3e342"
   integrity sha512-MpY/o8/8kj+EcnxwvrP4aTJSWw/aZ7JIGR4aBeZkZw5B7/Jn+tY9/VNwtcoGmdT7GfggGIU4kygOMSbYnOrAbg==
 
+"@inlang/cli@^3.0.10":
+  version "3.0.10"
+  resolved "https://registry.yarnpkg.com/@inlang/cli/-/cli-3.0.10.tgz#c1e8d0efb7f24daf524868af76ecb636dc542841"
+  integrity sha512-09uUevAj6pw8n+sPrN0Pl9NQMObQeLve01DVJRIMfLZ/qOZbrWwnOWsU748phTJc88subDp3CHk7B/IeHfB8UQ==
+  dependencies:
+    "@inlang/sdk" "2.4.7"
+    esbuild-wasm "^0.19.2"
+
 "@inlang/detect-json-formatting@1.0.0":
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/@inlang/detect-json-formatting/-/detect-json-formatting-1.0.0.tgz#3b9de483e8d5cc9f3858a81bd823cb6a732ef0be"
@@ -244,18 +252,6 @@
     json5 "2.2.3"
     posthog-node "3.1.3"
 
-"@inlang/paraglide-js@1.11.3":
-  version "1.11.3"
-  resolved "https://registry.yarnpkg.com/@inlang/paraglide-js/-/paraglide-js-1.11.3.tgz#7aad7599da1b266b9dfa1e73f6aa3b45c9ccf408"
-  integrity sha512-WVNraTylfZty0kt5EQNh8yx0WUJbtYEmc8YoNRRSUWB0rqeCh8a9xIQnmzZxBMf7IL7es+Ppiqx15py7mukJRw==
-  dependencies:
-    "@inlang/detect-json-formatting" "1.0.0"
-    commander "11.1.0"
-    consola "3.2.3"
-    dedent "1.5.1"
-    json5 "2.2.3"
-    posthog-node "^4.0.1"
-
 "@inlang/paraglide-next@0.5.2":
   version "0.5.2"
   resolved "https://registry.yarnpkg.com/@inlang/paraglide-next/-/paraglide-next-0.5.2.tgz#9d2df9c8a6f000b2ff9d96e83d3bbf548dde14fd"
@@ -268,6 +264,17 @@
     qs "^6.12.1"
     rsc-env "^0.0.2"
 
+"@inlang/sdk@2.4.7":
+  version "2.4.7"
+  resolved "https://registry.yarnpkg.com/@inlang/sdk/-/sdk-2.4.7.tgz#5e1c10cce353055a5d6dd829f0a09b9d9adc1b17"
+  integrity sha512-EKq1mituvRjYVT4iCLFQyz4W4c5L0i5JsPKcjiOZnFUN7gcnKgnoqQB/M7eBy2dNTinH+yR6lftmurOdh77rzA==
+  dependencies:
+    "@lix-js/sdk" "0.4.6"
+    "@sinclair/typebox" "^0.31.17"
+    kysely "^0.27.4"
+    sqlite-wasm-kysely "0.3.0"
+    uuid "^10.0.0"
+
 "@isaacs/cliui@^8.0.2":
   version "8.0.2"
   resolved "https://registry.yarnpkg.com/@isaacs/cliui/-/cliui-8.0.2.tgz#b37667b7bc181c168782259bab42474fbf52b550"
@@ -279,6 +286,24 @@
     strip-ansi-cjs "npm:strip-ansi@^6.0.1"
     wrap-ansi "^8.1.0"
     wrap-ansi-cjs "npm:wrap-ansi@^7.0.0"
+
+"@lix-js/sdk@0.4.6":
+  version "0.4.6"
+  resolved "https://registry.yarnpkg.com/@lix-js/sdk/-/sdk-0.4.6.tgz#ea8fd289f6488ffb52a4e66ebd0cddf37901ebc1"
+  integrity sha512-uxdDhD9kKLaySyTPlMw5GfPDEDH7YIPcReoCaktFoZ1HUEtdcvABWH+nzC7TTP5nvUIrW70u72ThEczysUgnrw==
+  dependencies:
+    "@lix-js/server-protocol-schema" "0.1.1"
+    dedent "1.5.1"
+    human-id "^4.1.1"
+    js-sha256 "^0.11.0"
+    kysely "^0.27.4"
+    sqlite-wasm-kysely "0.3.0"
+    uuid "^10.0.0"
+
+"@lix-js/server-protocol-schema@0.1.1":
+  version "0.1.1"
+  resolved "https://registry.yarnpkg.com/@lix-js/server-protocol-schema/-/server-protocol-schema-0.1.1.tgz#a442a271131099bea0041d3e75637be0807168a7"
+  integrity sha512-jBeALB6prAbtr5q4vTuxnRZZv1M2rKe8iNqRQhFJ4Tv7150unEa0vKyz0hs8Gl3fUGsWaNJBh3J8++fpbrpRBQ==
 
 "@napi-rs/wasm-runtime@^0.2.7":
   version "0.2.8"
@@ -575,6 +600,16 @@
   version "1.11.0"
   resolved "https://registry.yarnpkg.com/@rushstack/eslint-patch/-/eslint-patch-1.11.0.tgz#75dce8e972f90bba488e2b0cc677fb233aa357ab"
   integrity sha512-zxnHvoMQVqewTJr/W4pKjF0bMGiKJv1WX7bSrkl46Hg0QjESbzBROWK0Wg4RphzSOS5Jiy7eFimmM3UgMrMZbQ==
+
+"@sinclair/typebox@^0.31.17":
+  version "0.31.28"
+  resolved "https://registry.yarnpkg.com/@sinclair/typebox/-/typebox-0.31.28.tgz#b68831e7bc7d09daac26968ea32f42bedc968ede"
+  integrity sha512-/s55Jujywdw/Jpan+vsy6JZs1z2ZTGxTmbZTPiuSL2wz9mfzA2gN1zzaqmvfi4pq+uOt7Du85fkiwv5ymW84aQ==
+
+"@sqlite.org/sqlite-wasm@^3.48.0-build2":
+  version "3.48.0-build4"
+  resolved "https://registry.yarnpkg.com/@sqlite.org/sqlite-wasm/-/sqlite-wasm-3.48.0-build4.tgz#a03e5e541ca05997149e819aa1f9ab473e3ffb72"
+  integrity sha512-hI6twvUkzOmyGZhQMza1gpfqErZxXRw6JEsiVjUbo7tFanVD+8Oil0Ih3l2nGzHdxPI41zFmfUQG7GHqhciKZQ==
 
 "@swc/counter@0.1.3":
   version "0.1.3"
@@ -1050,7 +1085,7 @@ axe-core@^4.10.0:
   resolved "https://registry.yarnpkg.com/axe-core/-/axe-core-4.10.3.tgz#04145965ac7894faddbac30861e5d8f11bfd14fc"
   integrity sha512-Xm7bpRXnDSX2YE2YFfBk2FnF0ep6tmG7xPh8iHee8MIcrgq762Nkce856dYtJYLkuIoYZvGfTs/PbZhideTcEg==
 
-axios@^1.6.0, axios@^1.7.4:
+axios@^1.6.0:
   version "1.8.4"
   resolved "https://registry.yarnpkg.com/axios/-/axios-1.8.4.tgz#78990bb4bc63d2cae072952d374835950a82f447"
   integrity sha512-eBSYY4Y68NNlHbHBMdeDmKNtDgXWhQsJcGqzO3iLUM0GraQFSS9cVgPX5I9b3lbdFKyYoAEGAZF1DwhTaljNAw==
@@ -1489,6 +1524,11 @@ es-to-primitive@^1.3.0:
     is-callable "^1.2.7"
     is-date-object "^1.0.5"
     is-symbol "^1.0.4"
+
+esbuild-wasm@^0.19.2:
+  version "0.19.12"
+  resolved "https://registry.yarnpkg.com/esbuild-wasm/-/esbuild-wasm-0.19.12.tgz#4edf5c2f3a8d90a8e0d38c1c92968ae4a050ded4"
+  integrity sha512-Zmc4hk6FibJZBcTx5/8K/4jT3/oG1vkGTEeKJUQFCUQKimD6Q7+adp/bdVQyYJFolMKaXkQnVZdV4O5ZaTYmyQ==
 
 escape-string-regexp@^4.0.0:
   version "4.0.0"
@@ -2022,6 +2062,11 @@ hasown@^2.0.2:
   dependencies:
     function-bind "^1.1.2"
 
+human-id@^4.1.1:
+  version "4.1.1"
+  resolved "https://registry.yarnpkg.com/human-id/-/human-id-4.1.1.tgz#2801fbd61b9a5c1c9170f332802db6408a39a4b0"
+  integrity sha512-3gKm/gCSUipeLsRYZbbdA1BD83lBoWUkZ7G9VFrhWPAU76KwYo5KR8V28bpoPm/ygy0x5/GCbpRQdY7VLYCoIg==
+
 ignore@^5.2.0, ignore@^5.3.1:
   version "5.3.2"
   resolved "https://registry.yarnpkg.com/ignore/-/ignore-5.3.2.tgz#3cd40e729f3643fd87cb04e50bf0eb722bc596f5"
@@ -2297,6 +2342,11 @@ jiti@^2.4.2:
   resolved "https://registry.yarnpkg.com/jiti/-/jiti-2.4.2.tgz#d19b7732ebb6116b06e2038da74a55366faef560"
   integrity sha512-rg9zJN+G4n2nfJl5MW3BMygZX56zKPNVEYYqq7adpmMh4Jn2QNEwhvQlFy6jPVdcod7txZtKHWnyZiA3a0zP7A==
 
+js-sha256@^0.11.0:
+  version "0.11.0"
+  resolved "https://registry.yarnpkg.com/js-sha256/-/js-sha256-0.11.0.tgz#256a921d9292f7fe98905face82e367abaca9576"
+  integrity sha512-6xNlKayMZvds9h1Y1VWc0fQHQ82BxTXizWPEtEeGvmOUYpBRy4gbWroHLpzowe6xiQhHpelCQiE7HEdznyBL9Q==
+
 "js-tokens@^3.0.0 || ^4.0.0":
   version "4.0.0"
   resolved "https://registry.yarnpkg.com/js-tokens/-/js-tokens-4.0.0.tgz#19203fb59991df98e3a287050d4647cdeaf32499"
@@ -2352,6 +2402,11 @@ keyv@^4.5.3:
   integrity sha512-oxVHkHR/EJf2CNXnWxRLW6mg7JyCCUcG0DtEGmL2ctUo1PNTin1PUil+r/+4r5MpVgC/fn1kjsx7mjSujKqIpw==
   dependencies:
     json-buffer "3.0.1"
+
+kysely@^0.27.4:
+  version "0.27.6"
+  resolved "https://registry.yarnpkg.com/kysely/-/kysely-0.27.6.tgz#b2a908e160e510f9945586ca9de1616c187a2a8e"
+  integrity sha512-FIyV/64EkKhJmjgC0g2hygpBv5RNWVPyNCqSAD7eTCv6eFWNIi4PN1UvdSJGicN/o35bnevgis4Y0UDC0qi8jQ==
 
 language-subtag-registry@^0.3.20:
   version "0.3.23"
@@ -2550,11 +2605,6 @@ natural-compare@^1.4.0:
   version "1.4.0"
   resolved "https://registry.yarnpkg.com/natural-compare/-/natural-compare-1.4.0.tgz#4abebfeed7541f2c27acfb29bdbbd15c8d5ba4f7"
   integrity sha512-OWND8ei3VtNC9h7V60qff3SVobHr996CTwgxubgyQYEpg290h9J0buyECNNJexkFm5sOajh5G116RYA1c8ZMSw==
-
-next-themes@^0.3.0:
-  version "0.3.0"
-  resolved "https://registry.yarnpkg.com/next-themes/-/next-themes-0.3.0.tgz#b4d2a866137a67d42564b07f3a3e720e2ff3871a"
-  integrity sha512-/QHIrsYpd6Kfk7xakK4svpDI5mmXP0gfvCoJdGpZQ2TOrQZmsW0QxjaiLn8wbIKjtm4BTSqLoix4lxYYOnLJ/w==
 
 next@15.2.4:
   version "15.2.4"
@@ -2772,13 +2822,6 @@ posthog-node@3.1.3:
   dependencies:
     axios "^1.6.0"
     rusha "^0.8.14"
-
-posthog-node@^4.0.1:
-  version "4.11.1"
-  resolved "https://registry.yarnpkg.com/posthog-node/-/posthog-node-4.11.1.tgz#07d39a99efd8a4b94659ecfccb6728612f9125fe"
-  integrity sha512-Hdby0Rq2K1rzjHxQdUmFBEP2UqAR/tY4d0WbNp7GxkYUK0YZvAD15MkeorSo4b8X7zgosHfQJVRxGx0HWSYPBA==
-  dependencies:
-    axios "^1.7.4"
 
 prelude-ls@^1.2.1:
   version "1.2.1"
@@ -3115,6 +3158,13 @@ source-map-js@^1.0.2, source-map-js@^1.2.1:
   resolved "https://registry.yarnpkg.com/source-map-js/-/source-map-js-1.2.1.tgz#1ce5650fddd87abc099eda37dcff024c2667ae46"
   integrity sha512-UXWMKhLOwVKb728IUtQPXxfYU+usdybtUrK/8uGE8CQMvrhOpwvzDBwj0QhSL7MQc7vIsISBG8VQ8+IDQxpfQA==
 
+sqlite-wasm-kysely@0.3.0:
+  version "0.3.0"
+  resolved "https://registry.yarnpkg.com/sqlite-wasm-kysely/-/sqlite-wasm-kysely-0.3.0.tgz#ee536b6250cab238f5cba83ee9fc47c77df2bcb3"
+  integrity sha512-TzjBNv7KwRw6E3pdKdlRyZiTmUIE0UttT/Sl56MVwVARl/u5gp978KepazCJZewFUnlWHz9i3NQd4kOtP/Afdg==
+  dependencies:
+    "@sqlite.org/sqlite-wasm" "^3.48.0-build2"
+
 stable-hash@^0.0.5:
   version "0.0.5"
   resolved "https://registry.yarnpkg.com/stable-hash/-/stable-hash-0.0.5.tgz#94e8837aaeac5b4d0f631d2972adef2924b40269"
@@ -3449,6 +3499,11 @@ use-sidecar@^1.1.3:
   dependencies:
     detect-node-es "^1.1.0"
     tslib "^2.0.0"
+
+uuid@^10.0.0:
+  version "10.0.0"
+  resolved "https://registry.yarnpkg.com/uuid/-/uuid-10.0.0.tgz#5a95aa454e6e002725c79055fd42aaba30ca6294"
+  integrity sha512-8XkAphELsDnEGrDxUOHB3RGvXz6TeuYSGEZBOjtTtPm2lwhGBjLgOzLHB63IUWfBpNucQjND6d3AOudO+H3RWQ==
 
 which-boxed-primitive@^1.1.0, which-boxed-primitive@^1.1.1:
   version "1.1.1"

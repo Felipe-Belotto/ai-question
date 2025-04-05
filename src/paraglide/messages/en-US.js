@@ -154,8 +154,6 @@ export const creatorDescription = () => `Front-end developer from Campinas, Braz
 export const quizTitle = (params) => `Quiz: ${params.topic}`
 
 
-export { defaultTopic } from "./pt-BR.js"
-
 /**
  * 
  * @returns {string}
@@ -242,3 +240,11 @@ export const previous = () => `Previous`
  */
 /* @__NO_SIDE_EFFECTS__ */
 export const next = () => `Next`
+
+
+/**
+ * 
+ * @returns {string}
+ */
+/* @__NO_SIDE_EFFECTS__ */
+export const defaultTopic = () => `General Knowledge`

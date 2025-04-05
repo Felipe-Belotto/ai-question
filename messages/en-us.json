@@ -28,5 +28,6 @@
   "startOver": "Start over",
   "questionNavigation": "Question navigation",
   "previous": "Previous",
-  "next": "Next"
+  "next": "Next",
+  "defaultTopic": "General Knowledge"
 }

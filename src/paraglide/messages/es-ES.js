@@ -15,7 +15,7 @@
  * @returns {string}
  */
 /* @__NO_SIDE_EFFECTS__ */
-export const howItWorks = () => `Como funciona`
+export const howItWorks = () => `Cómo funciona`
 
 
 /**
@@ -23,7 +23,7 @@ export const howItWorks = () => `Como funciona`
  * @returns {string}
  */
 /* @__NO_SIDE_EFFECTS__ */
-export const creatorInfo = () => `Información del desarrollador`
+export const creatorInfo = () => `Información para desarrolladores`
 
 
 /**
@@ -31,7 +31,7 @@ export const creatorInfo = () => `Información del desarrollador`
  * @returns {string}
  */
 /* @__NO_SIDE_EFFECTS__ */
-export const welcome = () => `Bienvenido a `
+export const welcome = () => `Bienvenido a`
 
 
 /**
@@ -39,7 +39,7 @@ export const welcome = () => `Bienvenido a `
  * @returns {string}
  */
 /* @__NO_SIDE_EFFECTS__ */
-export const welcomeMessage = () => `Genera exámenes personalizados con inteligencia artificial para mejorar el aprendizaje.`
+export const welcomeMessage = () => `Genera exámenes personalizados con inteligencia artificial para potenciar el aprendizaje.`
 
 
 /**
@@ -55,7 +55,7 @@ export const inputPromptMessage = () => `¿En qué tema te gustaría mejorar tus
  * @returns {string}
  */
 /* @__NO_SIDE_EFFECTS__ */
-export const inputPromptPlaceholder = () => `Ingresa al tema para generar tu examen`
+export const inputPromptPlaceholder = () => `Ingresa el tema para generar tu examen`
 
 
 /**
@@ -111,7 +111,7 @@ export const step2Title = () => `Ingrese su mensaje`
  * @returns {string}
  */
 /* @__NO_SIDE_EFFECTS__ */
-export const step2Description = () => `Ingrese un mensaje o pregunta específica sobre el tema elegido.`
+export const step2Description = () => `Ingrese una solicitud o pregunta específica sobre el tema elegido.`
 
 
 /**
@@ -127,7 +127,7 @@ export const step3Title = () => `Recibe tu examen`
  * @returns {string}
  */
 /* @__NO_SIDE_EFFECTS__ */
-export const step3Description = () => `La plataforma genera un examen de 10 preguntas personalizado para su tema.`
+export const step3Description = () => `La plataforma genera un examen de 10 preguntas personalizado según tu tema.`
 
 
 /**
@@ -143,7 +143,7 @@ export const creatorImageAlt = () => `Foto del creador`
  * @returns {string}
  */
 /* @__NO_SIDE_EFFECTS__ */
-export const creatorDescription = () => `Desarrollador front-end de Campinas, Brasil, apasionado por el diseño de interfaces y la creación de sitios web interactivos. Este proyecto busca demostrar cómo las herramientas de IA pueden mejorar la educación, ampliando el acceso al conocimiento y promoviendo el aprendizaje continuo.`
+export const creatorDescription = () => `Desarrollador front-end de Campinas, Brasil, apasionado por el diseño de interfaces y la creación de sitios web interactivos. Este proyecto busca demostrar cómo las herramientas de IA pueden mejorar la educación, ampliando el acceso al conocimiento y promoviendo el aprendizaje permanente.`
 
 
 /**
@@ -151,10 +151,8 @@ export const creatorDescription = () => `Desarrollador front-end de Campinas, Br
  * @returns {string}
  */
 /* @__NO_SIDE_EFFECTS__ */
-export const quizTitle = (params) => `Prueba: ${params.topic}`
+export const quizTitle = (params) => `Cuestionario: ${params.topic}`
 
-
-export { defaultTopic } from "./pt-BR.js"
 
 /**
  * 
@@ -242,3 +240,11 @@ export const previous = () => `Anterior`
  */
 /* @__NO_SIDE_EFFECTS__ */
 export const next = () => `Próximo`
+
+
+/**
+ * 
+ * @returns {string}
+ */
+/* @__NO_SIDE_EFFECTS__ */
+export const defaultTopic = () => `Conocimiento general`

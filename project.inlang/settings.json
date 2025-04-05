@@ -1,7 +1,10 @@
 {
   "$schema": "https://inlang.com/schema/project-settings",
-  "sourceLanguageTag": "pt-BR",
-  "languageTags": ["pt-BR", "en-US", "es-ES"],
+  "baseLocale": "en-US",
+  "baseLanguageTag": "en-US",
+  "locales": ["en-US", "pt-BR", "es-ES"],
+  "sourceLanguageTag": "en-US",
+  "languageTags": ["en-US", "pt-BR", "es-ES"],
   "modules": [
     "https://cdn.jsdelivr.net/npm/@inlang/message-lint-rule-empty-pattern@latest/dist/index.js",
     "https://cdn.jsdelivr.net/npm/@inlang/message-lint-rule-missing-translation@latest/dist/index.js",

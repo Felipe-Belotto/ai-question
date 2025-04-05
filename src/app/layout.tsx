@@ -1,8 +1,9 @@
+import { LanguageProvider } from "@inlang/paraglide-next";
+import { languageTag } from "@/paraglide/runtime.js";
 import type { Metadata } from "next";
 import { Nunito } from "next/font/google";
 import "./globals.css";
 import { Header } from "@/components/Header";
-import { languageTag } from "@/paraglide/runtime";
 
 const nunito = Nunito({
   subsets: ["latin"],
@@ -79,13 +80,15 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang={languageTag()}>
-      <body
-        className={`${nunito.className} antialiased min-h-screen bg-background flex flex-col`}
-      >
-        <Header />
-        {children}
-      </body>
-    </html>
+    <LanguageProvider>
+      <html lang={languageTag()}>
+        <body
+          className={`${nunito.className} antialiased min-h-screen bg-background flex flex-col`}
+        >
+          <Header />
+          {children}
+        </body>
+      </html>
+    </LanguageProvider>
   );
 }

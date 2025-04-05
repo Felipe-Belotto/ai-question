@@ -1,7 +1,7 @@
 /* eslint-disable */
 import { languageTag } from "./runtime.js"
-import * as pt_BR from "./messages/pt-BR.js"
 import * as en_US from "./messages/en-US.js"
+import * as pt_BR from "./messages/pt-BR.js"
 import * as es_ES from "./messages/es-ES.js"
 
 
@@ -14,7 +14,7 @@ import * as es_ES from "./messages/es-ES.js"
  * - The params are NonNullable<unknown> because the inlang SDK does not provide information on the type of a param (yet).
  * 
  * @param {{}} params
- * @param {{ languageTag?: "pt-BR" | "en-US" | "es-ES" }} options
+ * @param {{ languageTag?: "en-US" | "pt-BR" | "es-ES" }} options
  * @returns {string}
  */
 /* @__NO_SIDE_EFFECTS__ */
@@ -37,7 +37,7 @@ export const howItWorks = (params = {}, options = {}) => {
  * - The params are NonNullable<unknown> because the inlang SDK does not provide information on the type of a param (yet).
  * 
  * @param {{}} params
- * @param {{ languageTag?: "pt-BR" | "en-US" | "es-ES" }} options
+ * @param {{ languageTag?: "en-US" | "pt-BR" | "es-ES" }} options
  * @returns {string}
  */
 /* @__NO_SIDE_EFFECTS__ */
@@ -60,7 +60,7 @@ export const creatorInfo = (params = {}, options = {}) => {
  * - The params are NonNullable<unknown> because the inlang SDK does not provide information on the type of a param (yet).
  * 
  * @param {{}} params
- * @param {{ languageTag?: "pt-BR" | "en-US" | "es-ES" }} options
+ * @param {{ languageTag?: "en-US" | "pt-BR" | "es-ES" }} options
  * @returns {string}
  */
 /* @__NO_SIDE_EFFECTS__ */
@@ -83,7 +83,7 @@ export const welcome = (params = {}, options = {}) => {
  * - The params are NonNullable<unknown> because the inlang SDK does not provide information on the type of a param (yet).
  * 
  * @param {{}} params
- * @param {{ languageTag?: "pt-BR" | "en-US" | "es-ES" }} options
+ * @param {{ languageTag?: "en-US" | "pt-BR" | "es-ES" }} options
  * @returns {string}
  */
 /* @__NO_SIDE_EFFECTS__ */
@@ -106,7 +106,7 @@ export const welcomeMessage = (params = {}, options = {}) => {
  * - The params are NonNullable<unknown> because the inlang SDK does not provide information on the type of a param (yet).
  * 
  * @param {{}} params
- * @param {{ languageTag?: "pt-BR" | "en-US" | "es-ES" }} options
+ * @param {{ languageTag?: "en-US" | "pt-BR" | "es-ES" }} options
  * @returns {string}
  */
 /* @__NO_SIDE_EFFECTS__ */
@@ -129,7 +129,7 @@ export const inputPromptMessage = (params = {}, options = {}) => {
  * - The params are NonNullable<unknown> because the inlang SDK does not provide information on the type of a param (yet).
  * 
  * @param {{}} params
- * @param {{ languageTag?: "pt-BR" | "en-US" | "es-ES" }} options
+ * @param {{ languageTag?: "en-US" | "pt-BR" | "es-ES" }} options
  * @returns {string}
  */
 /* @__NO_SIDE_EFFECTS__ */
@@ -152,7 +152,7 @@ export const inputPromptPlaceholder = (params = {}, options = {}) => {
  * - The params are NonNullable<unknown> because the inlang SDK does not provide information on the type of a param (yet).
  * 
  * @param {{}} params
- * @param {{ languageTag?: "pt-BR" | "en-US" | "es-ES" }} options
+ * @param {{ languageTag?: "en-US" | "pt-BR" | "es-ES" }} options
  * @returns {string}
  */
 /* @__NO_SIDE_EFFECTS__ */
@@ -175,7 +175,7 @@ export const submitWaitingMessage = (params = {}, options = {}) => {
  * - The params are NonNullable<unknown> because the inlang SDK does not provide information on the type of a param (yet).
  * 
  * @param {{}} params
- * @param {{ languageTag?: "pt-BR" | "en-US" | "es-ES" }} options
+ * @param {{ languageTag?: "en-US" | "pt-BR" | "es-ES" }} options
  * @returns {string}
  */
 /* @__NO_SIDE_EFFECTS__ */
@@ -198,7 +198,7 @@ export const somethingWrong = (params = {}, options = {}) => {
  * - The params are NonNullable<unknown> because the inlang SDK does not provide information on the type of a param (yet).
  * 
  * @param {{}} params
- * @param {{ languageTag?: "pt-BR" | "en-US" | "es-ES" }} options
+ * @param {{ languageTag?: "en-US" | "pt-BR" | "es-ES" }} options
  * @returns {string}
  */
 /* @__NO_SIDE_EFFECTS__ */
@@ -221,7 +221,7 @@ export const startQuiz = (params = {}, options = {}) => {
  * - The params are NonNullable<unknown> because the inlang SDK does not provide information on the type of a param (yet).
  * 
  * @param {{}} params
- * @param {{ languageTag?: "pt-BR" | "en-US" | "es-ES" }} options
+ * @param {{ languageTag?: "en-US" | "pt-BR" | "es-ES" }} options
  * @returns {string}
  */
 /* @__NO_SIDE_EFFECTS__ */
@@ -244,7 +244,7 @@ export const step1Title = (params = {}, options = {}) => {
  * - The params are NonNullable<unknown> because the inlang SDK does not provide information on the type of a param (yet).
  * 
  * @param {{}} params
- * @param {{ languageTag?: "pt-BR" | "en-US" | "es-ES" }} options
+ * @param {{ languageTag?: "en-US" | "pt-BR" | "es-ES" }} options
  * @returns {string}
  */
 /* @__NO_SIDE_EFFECTS__ */
@@ -267,7 +267,7 @@ export const step1Description = (params = {}, options = {}) => {
  * - The params are NonNullable<unknown> because the inlang SDK does not provide information on the type of a param (yet).
  * 
  * @param {{}} params
- * @param {{ languageTag?: "pt-BR" | "en-US" | "es-ES" }} options
+ * @param {{ languageTag?: "en-US" | "pt-BR" | "es-ES" }} options
  * @returns {string}
  */
 /* @__NO_SIDE_EFFECTS__ */
@@ -290,7 +290,7 @@ export const step2Title = (params = {}, options = {}) => {
  * - The params are NonNullable<unknown> because the inlang SDK does not provide information on the type of a param (yet).
  * 
  * @param {{}} params
- * @param {{ languageTag?: "pt-BR" | "en-US" | "es-ES" }} options
+ * @param {{ languageTag?: "en-US" | "pt-BR" | "es-ES" }} options
  * @returns {string}
  */
 /* @__NO_SIDE_EFFECTS__ */
@@ -313,7 +313,7 @@ export const step2Description = (params = {}, options = {}) => {
  * - The params are NonNullable<unknown> because the inlang SDK does not provide information on the type of a param (yet).
  * 
  * @param {{}} params
- * @param {{ languageTag?: "pt-BR" | "en-US" | "es-ES" }} options
+ * @param {{ languageTag?: "en-US" | "pt-BR" | "es-ES" }} options
  * @returns {string}
  */
 /* @__NO_SIDE_EFFECTS__ */
@@ -336,7 +336,7 @@ export const step3Title = (params = {}, options = {}) => {
  * - The params are NonNullable<unknown> because the inlang SDK does not provide information on the type of a param (yet).
  * 
  * @param {{}} params
- * @param {{ languageTag?: "pt-BR" | "en-US" | "es-ES" }} options
+ * @param {{ languageTag?: "en-US" | "pt-BR" | "es-ES" }} options
  * @returns {string}
  */
 /* @__NO_SIDE_EFFECTS__ */
@@ -359,7 +359,7 @@ export const step3Description = (params = {}, options = {}) => {
  * - The params are NonNullable<unknown> because the inlang SDK does not provide information on the type of a param (yet).
  * 
  * @param {{}} params
- * @param {{ languageTag?: "pt-BR" | "en-US" | "es-ES" }} options
+ * @param {{ languageTag?: "en-US" | "pt-BR" | "es-ES" }} options
  * @returns {string}
  */
 /* @__NO_SIDE_EFFECTS__ */
@@ -382,7 +382,7 @@ export const creatorImageAlt = (params = {}, options = {}) => {
  * - The params are NonNullable<unknown> because the inlang SDK does not provide information on the type of a param (yet).
  * 
  * @param {{}} params
- * @param {{ languageTag?: "pt-BR" | "en-US" | "es-ES" }} options
+ * @param {{ languageTag?: "en-US" | "pt-BR" | "es-ES" }} options
  * @returns {string}
  */
 /* @__NO_SIDE_EFFECTS__ */
@@ -405,7 +405,7 @@ export const creatorDescription = (params = {}, options = {}) => {
  * - The params are NonNullable<unknown> because the inlang SDK does not provide information on the type of a param (yet).
  * 
  * @param {{ topic: NonNullable<unknown> }} params
- * @param {{ languageTag?: "pt-BR" | "en-US" | "es-ES" }} options
+ * @param {{ languageTag?: "en-US" | "pt-BR" | "es-ES" }} options
  * @returns {string}
  */
 /* @__NO_SIDE_EFFECTS__ */
@@ -428,30 +428,7 @@ export const quizTitle = (params , options = {}) => {
  * - The params are NonNullable<unknown> because the inlang SDK does not provide information on the type of a param (yet).
  * 
  * @param {{}} params
- * @param {{ languageTag?: "pt-BR" | "en-US" | "es-ES" }} options
- * @returns {string}
- */
-/* @__NO_SIDE_EFFECTS__ */
-export const defaultTopic = (params = {}, options = {}) => {
-	return {
-		"en-US": en_US.defaultTopic,
-		"es-ES": es_ES.defaultTopic,
-		"pt-BR": pt_BR.defaultTopic
-	}[options.languageTag ?? languageTag()]()
-}
-
-
-
-/**
- * This message has been compiled by [inlang paraglide](https://inlang.com/m/gerre34r/library-inlang-paraglideJs).
- *
- * - Don't edit the message's code. Use [Sherlock (VS Code extension)](https://inlang.com/m/r7kp499g/app-inlang-ideExtension),
- *   the [web editor](https://inlang.com/m/tdozzpar/app-inlang-finkLocalizationEditor) instead, or edit the translation files manually.
- * 
- * - The params are NonNullable<unknown> because the inlang SDK does not provide information on the type of a param (yet).
- * 
- * @param {{}} params
- * @param {{ languageTag?: "pt-BR" | "en-US" | "es-ES" }} options
+ * @param {{ languageTag?: "en-US" | "pt-BR" | "es-ES" }} options
  * @returns {string}
  */
 /* @__NO_SIDE_EFFECTS__ */
@@ -474,7 +451,7 @@ export const result = (params = {}, options = {}) => {
  * - The params are NonNullable<unknown> because the inlang SDK does not provide information on the type of a param (yet).
  * 
  * @param {{}} params
- * @param {{ languageTag?: "pt-BR" | "en-US" | "es-ES" }} options
+ * @param {{ languageTag?: "en-US" | "pt-BR" | "es-ES" }} options
  * @returns {string}
  */
 /* @__NO_SIDE_EFFECTS__ */
@@ -497,7 +474,7 @@ export const passed = (params = {}, options = {}) => {
  * - The params are NonNullable<unknown> because the inlang SDK does not provide information on the type of a param (yet).
  * 
  * @param {{}} params
- * @param {{ languageTag?: "pt-BR" | "en-US" | "es-ES" }} options
+ * @param {{ languageTag?: "en-US" | "pt-BR" | "es-ES" }} options
  * @returns {string}
  */
 /* @__NO_SIDE_EFFECTS__ */
@@ -520,7 +497,7 @@ export const failed = (params = {}, options = {}) => {
  * - The params are NonNullable<unknown> because the inlang SDK does not provide information on the type of a param (yet).
  * 
  * @param {{}} params
- * @param {{ languageTag?: "pt-BR" | "en-US" | "es-ES" }} options
+ * @param {{ languageTag?: "en-US" | "pt-BR" | "es-ES" }} options
  * @returns {string}
  */
 /* @__NO_SIDE_EFFECTS__ */
@@ -543,7 +520,7 @@ export const score = (params = {}, options = {}) => {
  * - The params are NonNullable<unknown> because the inlang SDK does not provide information on the type of a param (yet).
  * 
  * @param {{ number: NonNullable<unknown> }} params
- * @param {{ languageTag?: "pt-BR" | "en-US" | "es-ES" }} options
+ * @param {{ languageTag?: "en-US" | "pt-BR" | "es-ES" }} options
  * @returns {string}
  */
 /* @__NO_SIDE_EFFECTS__ */
@@ -566,7 +543,7 @@ export const question = (params , options = {}) => {
  * - The params are NonNullable<unknown> because the inlang SDK does not provide information on the type of a param (yet).
  * 
  * @param {{ answer: NonNullable<unknown> }} params
- * @param {{ languageTag?: "pt-BR" | "en-US" | "es-ES" }} options
+ * @param {{ languageTag?: "en-US" | "pt-BR" | "es-ES" }} options
  * @returns {string}
  */
 /* @__NO_SIDE_EFFECTS__ */
@@ -589,7 +566,7 @@ export const correctAnswer = (params , options = {}) => {
  * - The params are NonNullable<unknown> because the inlang SDK does not provide information on the type of a param (yet).
  * 
  * @param {{}} params
- * @param {{ languageTag?: "pt-BR" | "en-US" | "es-ES" }} options
+ * @param {{ languageTag?: "en-US" | "pt-BR" | "es-ES" }} options
  * @returns {string}
  */
 /* @__NO_SIDE_EFFECTS__ */
@@ -612,7 +589,7 @@ export const submitAnswers = (params = {}, options = {}) => {
  * - The params are NonNullable<unknown> because the inlang SDK does not provide information on the type of a param (yet).
  * 
  * @param {{}} params
- * @param {{ languageTag?: "pt-BR" | "en-US" | "es-ES" }} options
+ * @param {{ languageTag?: "en-US" | "pt-BR" | "es-ES" }} options
  * @returns {string}
  */
 /* @__NO_SIDE_EFFECTS__ */
@@ -635,7 +612,7 @@ export const startOver = (params = {}, options = {}) => {
  * - The params are NonNullable<unknown> because the inlang SDK does not provide information on the type of a param (yet).
  * 
  * @param {{}} params
- * @param {{ languageTag?: "pt-BR" | "en-US" | "es-ES" }} options
+ * @param {{ languageTag?: "en-US" | "pt-BR" | "es-ES" }} options
  * @returns {string}
  */
 /* @__NO_SIDE_EFFECTS__ */
@@ -658,7 +635,7 @@ export const questionNavigation = (params = {}, options = {}) => {
  * - The params are NonNullable<unknown> because the inlang SDK does not provide information on the type of a param (yet).
  * 
  * @param {{}} params
- * @param {{ languageTag?: "pt-BR" | "en-US" | "es-ES" }} options
+ * @param {{ languageTag?: "en-US" | "pt-BR" | "es-ES" }} options
  * @returns {string}
  */
 /* @__NO_SIDE_EFFECTS__ */
@@ -681,7 +658,7 @@ export const previous = (params = {}, options = {}) => {
  * - The params are NonNullable<unknown> because the inlang SDK does not provide information on the type of a param (yet).
  * 
  * @param {{}} params
- * @param {{ languageTag?: "pt-BR" | "en-US" | "es-ES" }} options
+ * @param {{ languageTag?: "en-US" | "pt-BR" | "es-ES" }} options
  * @returns {string}
  */
 /* @__NO_SIDE_EFFECTS__ */
@@ -690,6 +667,29 @@ export const next = (params = {}, options = {}) => {
 		"en-US": en_US.next,
 		"es-ES": es_ES.next,
 		"pt-BR": pt_BR.next
+	}[options.languageTag ?? languageTag()]()
+}
+
+
+
+/**
+ * This message has been compiled by [inlang paraglide](https://inlang.com/m/gerre34r/library-inlang-paraglideJs).
+ *
+ * - Don't edit the message's code. Use [Sherlock (VS Code extension)](https://inlang.com/m/r7kp499g/app-inlang-ideExtension),
+ *   the [web editor](https://inlang.com/m/tdozzpar/app-inlang-finkLocalizationEditor) instead, or edit the translation files manually.
+ * 
+ * - The params are NonNullable<unknown> because the inlang SDK does not provide information on the type of a param (yet).
+ * 
+ * @param {{}} params
+ * @param {{ languageTag?: "en-US" | "pt-BR" | "es-ES" }} options
+ * @returns {string}
+ */
+/* @__NO_SIDE_EFFECTS__ */
+export const defaultTopic = (params = {}, options = {}) => {
+	return {
+		"en-US": en_US.defaultTopic,
+		"es-ES": es_ES.defaultTopic,
+		"pt-BR": pt_BR.defaultTopic
 	}[options.languageTag ?? languageTag()]()
 }
 

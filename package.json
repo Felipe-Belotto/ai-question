@@ -7,7 +7,8 @@
     "build": "paraglide-js compile --project ./project.inlang --outdir ./src/paraglide && next build",
     "start": "next start",
     "lint": "next lint",
-    "paraglide:compile": "paraglide-js compile --project ./project.inlang --outdir ./src/paraglide"
+    "paraglide": "npx @inlang/paraglide-js compile --project ./project.inlang --outdir ./src/paraglide",
+    "translate": "npx @inlang/cli machine translate --project ./project.inlang"
   },
   "dependencies": {
     "@google/generative-ai": "^0.21.0",
@@ -19,14 +20,14 @@
     "framer-motion": "^11.11.10",
     "lucide-react": "^0.454.0",
     "next": "15.2.4",
-    "next-themes": "^0.3.0",
     "react": "19.1.0",
     "react-dom": "19.1.0",
     "tailwind-merge": "^2.5.4",
     "tailwindcss-animate": "^1.0.7"
   },
   "devDependencies": {
-    "@inlang/paraglide-js": "1.11.3",
+    "@inlang/cli": "^3.0.10",
+    "@inlang/paraglide-js": "1.11.2",
     "@tailwindcss/postcss": "^4.1.3",
     "@types/node": "^20",
     "@types/react": "19.1.0",
